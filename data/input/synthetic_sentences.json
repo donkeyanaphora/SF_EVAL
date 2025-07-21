@@ -1,0 +1,193 @@
+{
+  "doctor_sentences": [
+    {
+      "text": "The patient presents with intermittent angina and a positive troponin I of zero point three six nanograms per milliliter.",
+      "terms": [
+        { "text": "troponin I", "start": 61, "end": 71, "ipa": "tɹoʊˈpoʊnɪn aɪ", "simple": "troh-POH-nin eye" }
+      ]
+    },
+    {
+      "text": "Post-operative pathology confirmed a stage two-A adenocarcinoma of the sigmoid colon.",
+      "terms": [
+        { "text": "adenocarcinoma", "start": 49, "end": 63, "ipa": "ˌædɪnoʊˌkɑːɹsɪˈnoʊmə", "simple": "ad-uh-no-kar-sih-NOH-muh" }
+      ]
+    },
+    {
+      "text": "We started ceftriaxone, two grams given intravenously every twenty-four hours, for suspected bacterial meningitis.",
+      "terms": [
+        { "text": "ceftriaxone", "start": 11, "end": 22, "ipa": "sɛfˈtɹaɪəˌksoʊn", "simple": "sef-TRY-ak-sone" }
+      ]
+    },
+    {
+      "text": "Her hemoglobin A-one-C has stabilized at seven point one percent after switching to semaglutide.",
+      "terms": [
+        { "text": "hemoglobin A-one-C", "start": 4, "end": 22, "ipa": "ˈhiːməˌɡloʊbɪn eɪ wʌn siː", "simple": "HEE-muh-gloh-bin A-one-C" },
+        { "text": "semaglutide", "start": 84, "end": 95, "ipa": "sɛˈmæglutaɪd", "simple": "seh-MAG-loo-tide" }
+      ]
+    },
+    {
+      "text": "Magnetic resonance imaging revealed a three-centimeter demyelinating plaque in the periventricular white matter.",
+      "terms": [
+        { "text": "demyelinating", "start": 55, "end": 68, "ipa": "diˈmaɪəlɪˌneɪtɪŋ", "simple": "dee-MY-uh-li-nay-ting" },
+        { "text": "periventricular", "start": 83, "end": 98, "ipa": "ˌpɛɹiˌvɛnˈtɹɪkjʊləɹ", "simple": "peh-ree-ven-TRIK-yoo-ler" }
+      ]
+    },
+    {
+      "text": "The echocardiogram shows an ejection fraction of thirty-five percent with global hypokinesis.",
+      "terms": [
+        { "text": "hypokinesis", "start": 81, "end": 92, "ipa": "ˌhaɪpoʊkaɪˈniːsɪs", "simple": "hy-poh-kye-NEE-sis" }
+      ]
+    },
+    {
+      "text": "Give zero point four milligrams of sublingual nitroglycerin as needed if chest pain is not relieved by rest.",
+      "terms": [
+        { "text": "nitroglycerin", "start": 46, "end": 59, "ipa": "ˌnaɪtɹoʊˈɡlɪsəɹɪn", "simple": "nye-troh-GLISS-er-in" }
+      ]
+    },
+    {
+      "text": "His B-N-P is one thousand two hundred forty picograms per milliliter, consistent with decompensated heart failure.",
+      "terms": [
+        { "text": "B-N-P", "start": 4, "end": 9, "ipa": "biː ɛn piː", "simple": "B-N-P" }
+      ]
+    },
+    {
+      "text": "We documented a Mallampati class three airway before intubation.",
+      "terms": [
+        { "text": "Mallampati", "start": 16, "end": 26, "ipa": "ˌmæləmpɑːti", "simple": "mal-əm-PAH-tee" }
+      ]
+    },
+    {
+      "text": "She is allergic to fluoroquinolones and developed Stevens-Johnson syndrome after taking ciprofloxacin.",
+      "terms": [
+        { "text": "fluoroquinolones", "start": 19, "end": 35, "ipa": "ˌflʊəɹoʊˈkwɪnəˌloʊnz", "simple": "flor-oh-KWIN-uh-lones" },
+        { "text": "Stevens-Johnson syndrome", "start": 50, "end": 74, "ipa": "ˈstiːvənz ˈdʒɒnsən ˈsɪndɹoʊm", "simple": "STEE-vunz JOHN-sun SIN-drohm" },
+        { "text": "ciprofloxacin", "start": 88, "end": 101, "ipa": "ˌsɪpɹoʊˈflɒksəsɪn", "simple": "sip-roh-FLOX-uh-sin" }
+      ]
+    },
+    {
+      "text": "Colonoscopy identified a sessile serrated lesion in the transverse colon, removed with a cold snare.",
+      "terms": [
+        { "text": "sessile", "start": 25, "end": 32, "ipa": "ˈsɛsaɪl", "simple": "SEH-sile" },
+        { "text": "serrated", "start": 33, "end": 41, "ipa": "səˈɹeɪtɪd", "simple": "suh-RAY-ted" }
+      ]
+    },
+    {
+      "text": "Start methylprednisolone, one gram intravenously each day, for acute optic neuritis.",
+      "terms": [
+        { "text": "methylprednisolone", "start": 6, "end": 24, "ipa": "ˌmɛθəlpɹɛdˈnɪsəˌloʊn", "simple": "meth-uhl-pred-NISS-uh-lone" },
+        { "text": "optic neuritis", "start": 69, "end": 83, "ipa": "ˈɒptɪk njʊˈɹaɪtɪs", "simple": "OP-tik nyoo-RYE-tis" }
+      ]
+    },
+    {
+      "text": "The infant’s Apgar scores were eight and nine at one and five minutes, respectively.",
+      "terms": [
+        { "text": "Apgar", "start": 13, "end": 18, "ipa": "ˈæpˌɡɑːɹ", "simple": "AP-gar" }
+      ]
+    },
+    {
+      "text": "Arterial blood gas shows a P-A-O-two of fifty-five millimeters of mercury on room air, indicating moderate hypoxemia.",
+      "terms": [
+        { "text": "hypoxemia", "start": 107, "end": 116, "ipa": "ˌhaɪpɒkˈsiːmiə", "simple": "hye-pok-SEE-mee-uh" }
+      ]
+    },
+    {
+      "text": "Doppler ultrasound detected a non-compressible femoral vein, consistent with deep venous thrombosis.",
+      "terms": [
+        { "text": "femoral vein", "start": 47, "end": 59, "ipa": "ˈfɛmɔɹəl veɪn", "simple": "FEM-er-uhl vayn" },
+        { "text": "deep venous thrombosis", "start": 77, "end": 99, "ipa": "diːp ˈviːnəs θɹɒmˈboʊsɪs", "simple": "deep VEE-nus throm-BOH-sis" }
+      ]
+    }
+  ],
+  "claim_sentences": [
+    {
+      "text": "Current Procedural Terminology code nine three three zero six for transthoracic echocardiography was partially denied because modifiers were missing.",
+      "terms": [
+        { "text": "Current Procedural Terminology", "start": 0, "end": 30, "ipa": "ˈkɜːɹənt pɹəˈsiːdʒɚəl ˌtɜːmɪˈnɒlədʒi", "simple": "KUR-ent pro-SEE-jur-al term-ih-NOL-uh-jee" },
+        { "text": "transthoracic echocardiography", "start": 66, "end": 96, "ipa": "tɹænθəˈɹæsɪk ˌɛkoʊˌkɑːɹdiˈɒɡɹəfi", "simple": "trans-tho-RASS-ik eh-koh-kar-dee-OG-ruh-fee" }
+      ]
+    },
+    {
+      "text": "International Classification of Diseases, tenth revision, code J forty-five point nine zero nine was flagged as unspecified asthma; a documentation update was requested.",
+      "terms": [
+        { "text": "International Classification of Diseases", "start": 0, "end": 40, "ipa": "ˌɪntɚˈnæʃənəl ˌklæsɪfɪˈkeɪʃən əv dɪˈziːzɪz", "simple": "IN-ter-NASH-uh-nal class-ih-fih-KAY-shun of dih-ZEE-ziz" }
+      ]
+    },
+    {
+      "text": "The member’s deductible was met, so the three-hundred-twenty-dollar coinsurance on H-C-P-C-S code J seventeen forty should be waived.",
+      "terms": [
+        { "text": "H-C-P-C-S", "start": 83, "end": 92, "ipa": "eɪtʃ siː piː siː ɛs", "simple": "H-C-P-C-S" }
+      ]
+    },
+    {
+      "text": "The pharmacy rejected the G-L-P-one authorization because the prior authorization expired on June thirtieth, twenty twenty-five.",
+      "terms": [
+        { "text": "G-L-P-one", "start": 26, "end": 35, "ipa": "dʒiː ɛl piː wʌn", "simple": "G-L-P-one" }
+      ]
+    },
+    {
+      "text": "Diagnosis-related group three-thirty payment was reduced due to a coding discrepancy with a secondary diagnosis of hypokalemia.",
+      "terms": [
+        { "text": "hypokalemia", "start": 115, "end": 126, "ipa": "ˌhaɪpoʊkəˈliːmiə", "simple": "hye-poh-kuh-LEE-mee-uh" }
+      ]
+    },
+    {
+      "text": "We need operative notes to support Current Procedural Terminology code two nine eight eight one for arthroscopic medial meniscectomy.",
+      "terms": [
+        { "text": "Current Procedural Terminology", "start": 35, "end": 65, "ipa": "ˈkɜːɹənt pɹəˈsiːdʒɚəl ˌtɜːmɪˈnɒlədʒi", "simple": "KUR-ent pro-SEE-jur-al term-ih-NOL-uh-jee" },
+        { "text": "arthroscopic", "start": 100, "end": 112, "ipa": "ˌɑːɹθɹoʊˈskɒpɪk", "simple": "ar-thruh-SKOP-ik" },
+        { "text": "meniscectomy", "start": 120, "end": 132, "ipa": "ˌmɛnɪsˈɛktəmi", "simple": "men-iss-EK-tuh-mee" }
+      ]
+    },
+    {
+      "text": "The E-O-B shows a coordination-of-benefits adjustment after the Medicare crossover.",
+      "terms": [
+        { "text": "E-O-B", "start": 4, "end": 9, "ipa": "iː oʊ biː", "simple": "E-O-B" }
+      ]
+    },
+    {
+      "text": "Modifier twenty-five was omitted on the evaluation and management service, causing bundling with the injection.",
+      "terms": []
+    },
+    {
+      "text": "An out-of-network penalty applied because N-P-I one two one five nine eight three seven four six lacks a single-case agreement.",
+      "terms": [
+        { "text": "N-P-I", "start": 42, "end": 47, "ipa": "ɛn piː aɪ", "simple": "N-P-I" }
+      ]
+    },
+    {
+      "text": "Denial code C-O one ninety-seven cites missing pre-certification for the lumbar laminectomy.",
+      "terms": [
+        { "text": "laminectomy", "start": 80, "end": 91, "ipa": "ˌlæmɪˈnɛktəmi", "simple": "lam-ih-NEK-tuh-mee" }
+      ]
+    },
+    {
+      "text": "The ambulance claim billed A zero four two eight, but mileage code A zero four two five was missing, triggering partial payment.",
+      "terms": []
+    },
+    {
+      "text": "The appeals team requests a radiology report to validate Current Procedural Terminology code seven four one seven seven for computed tomography of the abdomen and pelvis with contrast.",
+      "terms": [
+        { "text": "Current Procedural Terminology", "start": 57, "end": 87, "ipa": "ˈkɜːɹənt pɹəˈsiːdʒɚəl ˌtɜːmɪˈnɒlədʒi", "simple": "KUR-ent pro-SEE-jur-al term-ih-NOL-uh-jee" }
+      ]
+    },
+    {
+      "text": "The prosthetic hip device falls under H-C-P-C-S code L eight six nine nine, which is not covered without a K modifier.",
+      "terms": [
+        { "text": "prosthetic", "start": 4, "end": 14, "ipa": "pɹɒsˈθɛtɪk", "simple": "pross-THET-ik" },
+        { "text": "H-C-P-C-S", "start": 38, "end": 47, "ipa": "eɪtʃ siː piː siː ɛs", "simple": "H-C-P-C-S" }
+      ]
+    },
+    {
+      "text": "Claim edits routed Current Procedural Terminology nine six three seven two to incidental when billed with nine nine two one four on the same date of service.",
+      "terms": [
+        { "text": "Current Procedural Terminology", "start": 19, "end": 49, "ipa": "ˈkɜːɹənt pɹəˈsiːdʒɚəl ˌtɜːmɪˈnɒlədʒi", "simple": "KUR-ent pro-SEE-jur-al term-ih-NOL-uh-jee" }
+      ]
+    },
+    {
+      "text": "The high-cost threshold was exceeded; specialty medication coded J three four nine zero requires National Drug Code submission.",
+      "terms": [
+        { "text": "National Drug Code", "start": 97, "end": 115, "ipa": "ˈnæʃənəl dɹʌɡ koʊd", "simple": "NASH-uh-nal drug code" }
+      ]
+    }
+  ]
+}
