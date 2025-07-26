@@ -2,3 +2,4 @@
 .venv
 .models
 make_data.ipynb
+eval_sf.ipynb
