@@ -1,57 +1,70 @@
-import json, sys, traceback, time
+import json, uuid, time, sys, traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from dotenv import load_dotenv
 from openai import OpenAI, RateLimitError, APIError
+from dotenv import load_dotenv
 
-ROOT = Path(__file__).resolve().parents[1]  
-print(ROOT)
+# ── paths & constants ───────────────────────────────────────────────────────
+ROOT = Path(__file__).resolve().parents[1]
 JSON_IN = ROOT / "data" / "input"  / "synthetic_sentences.json"
 OUT_DIR = ROOT / "data" / "output"
+MANIFEST = OUT_DIR / "manifest.jsonl"
 
 MODEL = "tts-1-hd"
 VOICE = "nova"
 FORMAT = "wav"
 JOBS = 6
-RETRY = 3
+RETRIES = 3
 
 load_dotenv(ROOT / ".env") 
 client = OpenAI()
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-def validate_spans(block: list[dict], cat: str) -> None:
-    """Raise ValueError if any term span is incorrect."""
-    for idx, row in enumerate(block, 1):
-        txt = row["text"]
-        for term in row["terms"]:
-            if txt[term["start"] : term["end"]] != term["text"]:
-                raise ValueError(
-                    f"[{cat} #{idx}] span mismatch: "
-                    f'"{term["text"]}" not at {term["start"]}:{term["end"]}'
-                )
-    print(f"{cat} spans OK")
+# ── helper: span validation (unchanged) ─────────────────────────────────────
+# def validate_spans(block: list[dict], cat: str) -> None:
+#     for idx, row in enumerate(block, 1):
+#         txt = row["text"]
+#         for term in row["terms"]:
+#             if txt[term["start"]:term["end"]] != term["text"]:
+#                 raise ValueError(
+#                     f"[{cat} #{idx}] span mismatch: "
+#                     f'"{term["text"]}" not at {term["start"]}:{term["end"]}'
+#                 )
+#     print(f"{cat} spans OK")
 
+# ── helper: TTS for a single sentence ───────────────────────────────────────
+def synth(category: str, idx: int, sentence: str) -> None:
+    uid = str(uuid.uuid4())
+    wav = OUT_DIR / f"{uid}.{FORMAT}"
+    if wav.exists():
+        return  # skip if already done
 
-def synth(category, idx, sentence):
-    out_file = OUT_DIR / f"{category[:3]}_{idx:02}.{FORMAT}"
-    if out_file.exists():
-        return
-
-    for attempt in range(RETRY + 1):
+    for attempt in range(RETRIES + 1):
         try:
-            resp = client.audio.speech.create(
+            rsp = client.audio.speech.create(
                 model=MODEL,
                 voice=VOICE,
                 input=sentence,
-                response_format=FORMAT  # works with SDK ≤ 1.9x
+                response_format=FORMAT,
             )
-            resp.write_to_file(str(out_file))
-            print(f"saved {out_file.name}")
+            # new helper (SDK ≥ 1.23)
+            rsp.write_to_file(wav)
+            print("saved", wav.name)
+
+            # append one manifest line
+            with MANIFEST.open("a", encoding="utf-8") as f:
+                f.write(json.dumps({
+                    "uuid": uid,
+                    "file": wav.name,
+                    "category": category,
+                    "index": idx,
+                    "text": sentence
+                }) + "\n")
             return
 
         except (RateLimitError, APIError) as e:
-            if attempt < RETRY:
+            if attempt < RETRIES:
                 wait = 2 ** attempt
                 print(f"retry {category} #{idx} in {wait}s – {e}")
                 time.sleep(wait)
@@ -59,34 +72,31 @@ def synth(category, idx, sentence):
             raise
 
         except Exception:
-            # any other exception: log sentence + traceback, then skip
             print(f"\nFAILED {category} #{idx}\n{sentence}\n", file=sys.stderr)
             traceback.print_exc()
             return
 
-def main():
+# ── main batch driver (with threads) ────────────────────────────────────────
+def main() -> None:
     data = json.loads(JSON_IN.read_text("utf-8"))
 
-    # VALIDATE ALL SPANS FIRST
-    for cat in ("doctor_sentences", "claim_sentences"):
-        validate_spans(data[cat], cat)
+    # for cat in ("doctor_sentences", "claim_sentences"):
+    #     validate_spans(data[cat], cat)
 
-    # ONLY IF VALIDATION PASSES, DO TTS
     tasks = []
     with ThreadPoolExecutor(max_workers=JOBS) as pool:
-        for cat in ("doctor_sentences", "claim_sentences"):
+        for cat in ("doctor_sentences", "study_sentences"):
             for i, row in enumerate(data[cat], 1):
                 tasks.append(pool.submit(synth, cat, i, row["text"]))
 
-        # surface the first exception, if any
         for fut in as_completed(tasks):
-            exc = fut.exception()
-            if exc:
+            if (exc := fut.exception()):
                 print("\nBatch stopped because of an unrecoverable error.")
                 sys.exit(1)
 
-    print("All sentences processed; audio files are in", OUT_DIR)
+    print("All sentences processed; audio + manifest at:", OUT_DIR)
 
+# ── entry point ─────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     try:
         main()

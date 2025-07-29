@@ -1,5 +1,4 @@
 .env
 .venv
 .models
-make_data.ipynb
-eval_sf.ipynb
+/old_stuff
