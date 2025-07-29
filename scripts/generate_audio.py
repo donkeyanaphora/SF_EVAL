@@ -85,7 +85,7 @@ def main() -> None:
 
     tasks = []
     with ThreadPoolExecutor(max_workers=JOBS) as pool:
-        for cat in ("doctor_sentences", "study_sentences"):
+        for cat in ("radiology_dictations", "study_sentences"):
             for i, row in enumerate(data[cat], 1):
                 tasks.append(pool.submit(synth, cat, i, row["text"]))
 

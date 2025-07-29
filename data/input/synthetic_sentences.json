@@ -1,230 +1,698 @@
 {
-  "doctor_sentences": [],
+  "radiology_dictations": [
+    {
+      "text": "There is a 2.3 centimeter enhancing mass in the right hepatic lobe segment seven demonstrating arterial hyperenhancement with washout on delayed phases.",
+      "medical_terms": [
+        {"term": "hepatic lobe"},
+        {"term": "arterial hyperenhancement"},
+        {"term": "washout"}
+      ]
+    },
+    {
+      "text": "No acute intracranial abnormality. Mild chronic small vessel ischemic changes. Paranasal sinuses and mastoid air cells are clear.",
+      "medical_terms": [
+        {"term": "small vessel ischemic changes"},
+        {"term": "paranasal sinuses"},
+        {"term": "mastoid air cells"}
+      ]
+    },
+    {
+      "text": "Comparison made to prior study dated November fifteenth. The previously noted right lower lobe consolidation has significantly improved with only minimal residual scarring.",
+      "medical_terms": [
+        {"term": "right lower lobe"},
+        {"term": "consolidation"},
+        {"term": "scarring"}
+      ]
+    },
+    {
+      "text": "There is moderate degenerative disc disease at L4-L5 with disc desiccation and loss of disc height. Mild bilateral facet arthropathy without significant central canal stenosis.",
+      "medical_terms": [
+        {"term": "degenerative disc disease"},
+        {"term": "disc desiccation"},
+        {"term": "facet arthropathy"},
+        {"term": "central canal stenosis"}
+      ]
+    },
+    {
+      "text": "Multiple punctate foci of restricted diffusion scattered throughout the bilateral cerebral hemispheres consistent with acute embolic infarcts.",
+      "medical_terms": [
+        {"term": "restricted diffusion"},
+        {"term": "cerebral hemispheres"},
+        {"term": "embolic infarcts"}
+      ]
+    },
+    {
+      "text": "The gallbladder is distended with wall thickening measuring up to 5 millimeters and pericholecystic fluid. Multiple shadowing gallstones are noted.",
+      "medical_terms": [
+        {"term": "pericholecystic fluid"},
+        {"term": "gallstones"},
+        {"term": "wall thickening"}
+      ]
+    },
+    {
+      "text": "Redemonstrated is a complex left renal cyst with thick septations and nodular enhancement concerning for Bosniak category three lesion.",
+      "medical_terms": [
+        {"term": "complex renal cyst"},
+        {"term": "septations"},
+        {"term": "Bosniak category three"}
+      ]
+    },
+    {
+      "text": "Interval development of moderate right pleural effusion with associated compressive atelectasis. Recommend thoracentesis for symptomatic relief.",
+      "medical_terms": [
+        {"term": "pleural effusion"},
+        {"term": "compressive atelectasis"},
+        {"term": "thoracentesis"}
+      ]
+    },
+    {
+      "text": "The patient is status post anterior cervical discectomy and fusion at C5-C6. Hardware appears intact without evidence of loosening or migration.",
+      "medical_terms": [
+        {"term": "anterior cervical discectomy and fusion"},
+        {"term": "hardware"},
+        {"term": "loosening"}
+      ]
+    },
+    {
+      "text": "Large heterogeneously enhancing mass centered in the right parotid gland measuring 4.2 by 3.8 by 3.5 centimeters with areas of internal necrosis.",
+      "medical_terms": [
+        {"term": "parotid gland"},
+        {"term": "heterogeneously enhancing"},
+        {"term": "internal necrosis"}
+      ]
+    },
+    {
+      "text": "Acute appendicitis with periappendiceal inflammatory changes and fluid. No drainable collection identified. Surgical consultation recommended.",
+      "medical_terms": [
+        {"term": "acute appendicitis"},
+        {"term": "periappendiceal inflammatory changes"},
+        {"term": "drainable collection"}
+      ]
+    },
+    {
+      "text": "Bilateral ground glass opacities in a peripheral and basilar distribution typical for COVID pneumonia. No pleural effusion or pneumothorax.",
+      "medical_terms": [
+        {"term": "ground glass opacities"},
+        {"term": "COVID pneumonia"},
+        {"term": "pneumothorax"}
+      ]
+    },
+    {
+      "text": "MRI brain without and with contrast shows no evidence of metastatic disease. Post surgical changes noted in the right frontal lobe from prior resection.",
+      "medical_terms": [
+        {"term": "metastatic disease"},
+        {"term": "post surgical changes"},
+        {"term": "frontal lobe"}
+      ]
+    },
+    {
+      "text": "There is a nondisplaced fracture through the surgical neck of the right humerus. Alignment is anatomic. No significant soft tissue swelling.",
+      "medical_terms": [
+        {"term": "nondisplaced fracture"},
+        {"term": "surgical neck"},
+        {"term": "humerus"},
+        {"term": "anatomic alignment"}
+      ]
+    },
+    {
+      "text": "Stable appearance of the known left upper lobe spiculated nodule measuring 1.8 centimeters. Recommend continued surveillance in six months.",
+      "medical_terms": [
+        {"term": "spiculated nodule"},
+        {"term": "left upper lobe"},
+        {"term": "surveillance"}
+      ]
+    },
+    {
+      "text": "Moderate concentric left ventricular hypertrophy without focal wall motion abnormality. Ejection fraction visually estimated at sixty percent.",
+      "medical_terms": [
+        {"term": "left ventricular hypertrophy"},
+        {"term": "wall motion abnormality"},
+        {"term": "ejection fraction"}
+      ]
+    },
+    {
+      "text": "The pancreas demonstrates diffuse parenchymal atrophy with main pancreatic duct dilatation measuring up to 8 millimeters suggestive of chronic pancreatitis.",
+      "medical_terms": [
+        {"term": "parenchymal atrophy"},
+        {"term": "pancreatic duct dilatation"},
+        {"term": "chronic pancreatitis"}
+      ]
+    },
+    {
+      "text": "New area of cortical thickening and periosteal reaction along the mid diaphysis of the left femur. Consider MRI for further evaluation.",
+      "medical_terms": [
+        {"term": "cortical thickening"},
+        {"term": "periosteal reaction"},
+        {"term": "diaphysis"},
+        {"term": "femur"}
+      ]
+    },
+    {
+      "text": "No evidence of pulmonary embolism to the subsegmental level. Incidental note made of enlarged mediastinal lymph nodes measuring up to 1.5 centimeters.",
+      "medical_terms": [
+        {"term": "pulmonary embolism"},
+        {"term": "subsegmental level"},
+        {"term": "mediastinal lymph nodes"}
+      ]
+    },
+    {
+      "text": "Bilateral knee x-rays demonstrate moderate tricompartmental osteoarthritis worse on the right with joint space narrowing and marginal osteophytes.",
+      "medical_terms": [
+        {"term": "tricompartmental osteoarthritis"},
+        {"term": "joint space narrowing"},
+        {"term": "marginal osteophytes"}
+      ]
+    },
+    {
+      "text": "The liver demonstrates geographic areas of fatty infiltration. No focal hepatic lesion identified. Portal vein is patent with hepatopetal flow.",
+      "medical_terms": [
+        {"term": "fatty infiltration"},
+        {"term": "focal hepatic lesion"},
+        {"term": "portal vein"},
+        {"term": "hepatopetal flow"}
+      ]
+    },
+    {
+      "text": "Full thickness tear of the supraspinatus tendon with retraction to the level of the glenoid. Moderate muscle atrophy present.",
+      "medical_terms": [
+        {"term": "full thickness tear"},
+        {"term": "supraspinatus tendon"},
+        {"term": "glenoid"},
+        {"term": "muscle atrophy"}
+      ]
+    },
+    {
+      "text": "CT angiogram negative for aortic dissection or intramural hematoma. Atherosclerotic calcifications noted throughout the thoracic and abdominal aorta.",
+      "medical_terms": [
+        {"term": "aortic dissection"},
+        {"term": "intramural hematoma"},
+        {"term": "atherosclerotic calcifications"}
+      ]
+    },
+    {
+      "text": "Large left sided subdural hematoma measuring up to 2.3 centimeters with 8 millimeter midline shift. Neurosurgical consultation obtained.",
+      "medical_terms": [
+        {"term": "subdural hematoma"},
+        {"term": "midline shift"},
+        {"term": "neurosurgical consultation"}
+      ]
+    },
+    {
+      "text": "Bilateral adrenal nodules noted with the left measuring 2.8 centimeters demonstrating washout characteristics consistent with adenomas.",
+      "medical_terms": [
+        {"term": "adrenal nodules"},
+        {"term": "washout characteristics"},
+        {"term": "adenomas"}
+      ]
+    },
+    {
+      "text": "Prominent lymph nodes in the right axilla with loss of fatty hilum largest measuring 2.5 centimeters. Recommend tissue sampling.",
+      "medical_terms": [
+        {"term": "axillary lymph nodes"},
+        {"term": "fatty hilum"},
+        {"term": "tissue sampling"}
+      ]
+    },
+    {
+      "text": "Small amount of free fluid in the pelvis. Both ovaries appear normal. No adnexal mass identified. Clinical correlation recommended.",
+      "medical_terms": [
+        {"term": "free fluid"},
+        {"term": "pelvis"},
+        {"term": "adnexal mass"}
+      ]
+    },
+    {
+      "text": "Interval placement of right chest tube with improved pneumothorax now only minimal apical component remaining. Lung re-expansion noted.",
+      "medical_terms": [
+        {"term": "chest tube"},
+        {"term": "pneumothorax"},
+        {"term": "lung re-expansion"}
+      ]
+    },
+    {
+      "text": "Multifocal areas of marrow signal abnormality throughout the visualized skeleton concerning for osseous metastatic disease versus multiple myeloma.",
+      "medical_terms": [
+        {"term": "marrow signal abnormality"},
+        {"term": "osseous metastatic disease"},
+        {"term": "multiple myeloma"}
+      ]
+    },
+    {
+      "text": "The urinary bladder is distended with smooth wall thickening. Bilateral hydroureteronephrosis present. Foley catheter placement recommended.",
+      "medical_terms": [
+        {"term": "bladder wall thickening"},
+        {"term": "hydroureteronephrosis"},
+        {"term": "Foley catheter"}
+      ]
+    }
+  ],
   "study_sentences": [
     {
       "text": "Genomic profiling revealed a pathogenic fusion involving the EWSR1 gene characteristic of clear cell sarcoma.",
       "medical_terms": [
-        {
-          "term": "EWSR1 fusion"
-        },
-        {
-          "term": "clear cell sarcoma"
-        }
+        {"term": "EWSR1 fusion"},
+        {"term": "clear cell sarcoma"}
       ]
     },
     {
-      "text": "High\u2011resolution MRI identified leptomeningeal melanocytosis with diffuse T1 hyperintensity along the cerebellar folia.",
+      "text": "High-resolution MRI identified leptomeningeal melanocytosis with diffuse T1 hyperintensity along the cerebellar folia.",
       "medical_terms": [
-        {
-          "term": "leptomeningeal melanocytosis"
-        },
-        {
-          "term": "cerebellar folia"
-        }
+        {"term": "leptomeningeal melanocytosis"},
+        {"term": "cerebellar folia"}
       ]
     },
     {
-      "text": "Histopathology demonstrated Rosai\u2011Dorfman disease with emperipolesis of histiocytes.",
+      "text": "Histopathology demonstrated Rosai-Dorfman disease with emperipolesis of histiocytes.",
       "medical_terms": [
-        {
-          "term": "Rosai-Dorfman disease"
-        },
-        {
-          "term": "emperipolesis"
-        }
+        {"term": "Rosai-Dorfman disease"},
+        {"term": "emperipolesis"}
       ]
     },
     {
       "text": "CT imaging showed dendriform pulmonary ossification presenting as branching calcific densities in the lung parenchyma.",
       "medical_terms": [
-        {
-          "term": "dendriform pulmonary ossification"
-        },
-        {
-          "term": "lung parenchyma"
-        }
+        {"term": "dendriform pulmonary ossification"},
+        {"term": "lung parenchyma"}
       ]
     },
     {
       "text": "MRI spectroscopy detected elevated taurine peaks in a medulloblastoma of the desmoplastic/nodular subtype.",
       "medical_terms": [
-        {
-          "term": "taurine peaks"
-        },
-        {
-          "term": "medulloblastoma"
-        },
-        {
-          "term": "desmoplastic/nodular subtype"
-        }
+        {"term": "taurine peaks"},
+        {"term": "medulloblastoma"},
+        {"term": "desmoplastic/nodular subtype"}
       ]
     },
     {
       "text": "Ultrasound elastography suggested hepatic involvement by fibrolamellar carcinoma featuring lamellar fibrosis.",
       "medical_terms": [
-        {
-          "term": "fibrolamellar carcinoma"
-        },
-        {
-          "term": "lamellar fibrosis"
-        }
+        {"term": "fibrolamellar carcinoma"},
+        {"term": "lamellar fibrosis"}
       ]
     },
     {
-      "text": "PET\u2011CT uncovered hypermetabolism in a hemangiopericytoma seated at the cerebellopontine angle.",
+      "text": "PET-CT uncovered hypermetabolism in a hemangiopericytoma seated at the cerebellopontine angle.",
       "medical_terms": [
-        {
-          "term": "hemangiopericytoma"
-        },
-        {
-          "term": "cerebellopontine angle"
-        }
+        {"term": "hemangiopericytoma"},
+        {"term": "cerebellopontine angle"}
       ]
     },
     {
-      "text": "Whole\u2011body diffusion\u2011weighted MRI highlighted multifocal Langerhans cell histiocytosis with punched\u2011out skull lesions.",
+      "text": "Whole-body diffusion-weighted MRI highlighted multifocal Langerhans cell histiocytosis with punched-out skull lesions.",
       "medical_terms": [
-        {
-          "term": "Langerhans cell histiocytosis"
-        },
-        {
-          "term": "punched\u2011out skull lesions"
-        }
+        {"term": "Langerhans cell histiocytosis"},
+        {"term": "punched-out skull lesions"}
       ]
     },
     {
       "text": "Cardiac MRI disclosed left ventricular noncompaction characterized by a noncompacted to compacted myocardial ratio exceeding 2.3.",
       "medical_terms": [
-        {
-          "term": "left ventricular noncompaction"
-        },
-        {
-          "term": "myocardial ratio"
-        }
+        {"term": "left ventricular noncompaction"},
+        {"term": "myocardial ratio"}
       ]
     },
     {
       "text": "Serial CT enterography demonstrated mural thickening and sacculations in jejunal segments typical of jejunal diverticulosis with pneumatosis cystoides intestinalis.",
       "medical_terms": [
-        {
-          "term": "jejunal diverticulosis"
-        },
-        {
-          "term": "pneumatosis cystoides intestinalis"
-        }
+        {"term": "jejunal diverticulosis"},
+        {"term": "pneumatosis cystoides intestinalis"}
       ]
     },
     {
-      "text": "Endoscopic ultrasound\u2011guided biopsy confirmed solid pseudopapillary neoplasm of the pancreas harboring CTNNB1 mutation.",
+      "text": "Endoscopic ultrasound-guided biopsy confirmed solid pseudopapillary neoplasm of the pancreas harboring CTNNB1 mutation.",
       "medical_terms": [
-        {
-          "term": "solid pseudopapillary neoplasm"
-        },
-        {
-          "term": "CTNNB1 mutation"
-        }
+        {"term": "solid pseudopapillary neoplasm"},
+        {"term": "CTNNB1 mutation"}
       ]
     },
     {
-      "text": "High\u2011resolution CT delineated pulmonary alveolar microlithiasis with diffuse sand\u2011like calcifications.",
+      "text": "High-resolution CT delineated pulmonary alveolar microlithiasis with diffuse sand-like calcifications.",
       "medical_terms": [
-        {
-          "term": "pulmonary alveolar microlithiasis"
-        },
-        {
-          "term": "calcifications"
-        }
+        {"term": "pulmonary alveolar microlithiasis"},
+        {"term": "calcifications"}
       ]
     },
     {
       "text": "MR neurography revealed hourglass-like constriction of the suprascapular nerve implicating neuralgic amyotrophy.",
       "medical_terms": [
-        {
-          "term": "hourglass-like constriction"
-        },
-        {
-          "term": "neuralgic amyotrophy"
-        }
+        {"term": "hourglass-like constriction"},
+        {"term": "neuralgic amyotrophy"}
       ]
     },
     {
       "text": "CT urography showed a papillary tumor consistent with inverted papilloma of the renal pelvis.",
       "medical_terms": [
-        {
-          "term": "inverted papilloma"
-        },
-        {
-          "term": "renal pelvis"
-        }
+        {"term": "inverted papilloma"},
+        {"term": "renal pelvis"}
       ]
     },
     {
-      "text": "Magnetic resonance venography demonstrated cerebral venous sinus thrombosis secondary to Beh\u00e7et's disease.",
+      "text": "Magnetic resonance venography demonstrated cerebral venous sinus thrombosis secondary to Behçet's disease.",
       "medical_terms": [
-        {
-          "term": "cerebral venous sinus thrombosis"
-        },
-        {
-          "term": "Beh\u00e7et's disease"
-        }
+        {"term": "cerebral venous sinus thrombosis"},
+        {"term": "Behçet's disease"}
       ]
     },
     {
       "text": "MRI orbital study exhibited an expansile lesion with flow voids consistent with lymphangioma featuring intralesional hemorrhage.",
       "medical_terms": [
-        {
-          "term": "orbital lymphangioma"
-        },
-        {
-          "term": "intralesional hemorrhage"
-        }
+        {"term": "orbital lymphangioma"},
+        {"term": "intralesional hemorrhage"}
       ]
     },
     {
       "text": "Bone scintigraphy exhibited the 'hot skull' sign in polyostotic Paget disease involving the calvarium.",
       "medical_terms": [
-        {
-          "term": "hot skull sign"
-        },
-        {
-          "term": "polyostotic Paget disease"
-        },
-        {
-          "term": "calvarium"
-        }
+        {"term": "hot skull sign"},
+        {"term": "polyostotic Paget disease"},
+        {"term": "calvarium"}
       ]
     },
     {
-      "text": "Dual\u2011energy CT characterized crystal deposition consistent with tophaceous pseudogout involving the atlantoaxial joint.",
+      "text": "Dual-energy CT characterized crystal deposition consistent with tophaceous pseudogout involving the atlantoaxial joint.",
       "medical_terms": [
-        {
-          "term": "tophaceous pseudogout"
-        },
-        {
-          "term": "atlantoaxial joint"
-        }
+        {"term": "tophaceous pseudogout"},
+        {"term": "atlantoaxial joint"}
       ]
     },
     {
-      "text": "PET\u2011MRI illustrated hypermetabolic foci in myxoid/round cell liposarcoma with translocation t(12;16)(q13;p11).",
+      "text": "PET-MRI illustrated hypermetabolic foci in myxoid/round cell liposarcoma with translocation t(12;16)(q13;p11).",
       "medical_terms": [
-        {
-          "term": "myxoid/round cell liposarcoma"
-        },
-        {
-          "term": "t(12;16)(q13;p11) translocation"
-        }
+        {"term": "myxoid/round cell liposarcoma"},
+        {"term": "t(12;16)(q13;p11) translocation"}
       ]
     },
     {
-      "text": "Cone\u2011beam CT of the temporal bone depicted superior semicircular canal dehiscence with tympanic facial nerve aberrancy.",
+      "text": "Cone-beam CT of the temporal bone depicted superior semicircular canal dehiscence with tympanic facial nerve aberrancy.",
       "medical_terms": [
-        {
-          "term": "superior semicircular canal dehiscence"
-        },
-        {
-          "term": "facial nerve aberrancy"
-        }
+        {"term": "superior semicircular canal dehiscence"},
+        {"term": "facial nerve aberrancy"}
+      ]
+    },
+    {
+      "text": "We conducted a retrospective cohort study of 3,847 patients with type 2 diabetes mellitus who underwent metformin monotherapy between January 2018 and December 2022. Patients achieving HbA1c <7.0% at 6 months demonstrated significantly reduced risk of microvascular complications (HR 0.68, 95% CI 0.54-0.82, p<0.001)",
+      "medical_terms": [
+        {"term": "type 2 diabetes mellitus"},
+        {"term": "metformin"},
+        {"term": "monotherapy"},
+        {"term": "microvascular"}
+      ]
+    },
+    {
+      "text": "Multiparametric MRI revealed infiltrating ductal carcinoma with peritumoral lymphovascular invasion and axillary lymphadenopathy measuring 2.3 cm.",
+      "medical_terms": [
+        {"term": "infiltrating ductal carcinoma"},
+        {"term": "lymphovascular invasion"},
+        {"term": "axillary lymphadenopathy"}
+      ]
+    },
+    {
+      "text": "Transthoracic echocardiography demonstrated hypertrophic obstructive cardiomyopathy with systolic anterior motion of the mitral valve and resting gradient of 85 mmHg.",
+      "medical_terms": [
+        {"term": "hypertrophic obstructive cardiomyopathy"},
+        {"term": "systolic anterior motion"},
+        {"term": "mitral valve"}
+      ]
+    },
+    {
+      "text": "Next-generation sequencing identified pathogenic variants in BRCA2 and PALB2 genes conferring hereditary breast and ovarian cancer syndrome.",
+      "medical_terms": [
+        {"term": "BRCA2"},
+        {"term": "PALB2"},
+        {"term": "hereditary breast and ovarian cancer syndrome"}
+      ]
+    },
+    {
+      "text": "Cerebral angiography revealed moyamoya disease with characteristic puff of smoke appearance and transdural collateralization.",
+      "medical_terms": [
+        {"term": "moyamoya disease"},
+        {"term": "puff of smoke"},
+        {"term": "transdural collateralization"}
+      ]
+    },
+    {
+      "text": "Endobronchial ultrasound-guided transbronchial needle aspiration confirmed small cell lung carcinoma with neuroendocrine differentiation.",
+      "medical_terms": [
+        {"term": "endobronchial ultrasound"},
+        {"term": "transbronchial needle aspiration"},
+        {"term": "small cell lung carcinoma"},
+        {"term": "neuroendocrine differentiation"}
+      ]
+    },
+    {
+      "text": "Optical coherence tomography angiography detected choroidal neovascularization secondary to pathologic myopia with subfoveal fluid accumulation.",
+      "medical_terms": [
+        {"term": "optical coherence tomography angiography"},
+        {"term": "choroidal neovascularization"},
+        {"term": "pathologic myopia"}
+      ]
+    },
+    {
+      "text": "Immunohistochemistry revealed diffuse large B-cell lymphoma expressing CD20, BCL6, and MUM1 with Ki-67 proliferation index of 90%.",
+      "medical_terms": [
+        {"term": "diffuse large B-cell lymphoma"},
+        {"term": "CD20"},
+        {"term": "BCL6"},
+        {"term": "MUM1"},
+        {"term": "Ki-67 proliferation index"}
+      ]
+    },
+    {
+      "text": "Magnetic resonance cholangiopancreatography demonstrated primary sclerosing cholangitis with multifocal biliary strictures and beaded appearance.",
+      "medical_terms": [
+        {"term": "magnetic resonance cholangiopancreatography"},
+        {"term": "primary sclerosing cholangitis"},
+        {"term": "biliary strictures"}
+      ]
+    },
+    {
+      "text": "Fluorodeoxyglucose PET-CT revealed hypermetabolic mediastinal lymphadenopathy consistent with sarcoidosis demonstrating lambda sign.",
+      "medical_terms": [
+        {"term": "fluorodeoxyglucose PET-CT"},
+        {"term": "mediastinal lymphadenopathy"},
+        {"term": "sarcoidosis"},
+        {"term": "lambda sign"}
+      ]
+    },
+    {
+      "text": "Dynamic contrast-enhanced MRI showed hepatocellular carcinoma with arterial phase hyperenhancement and portal venous washout meeting LI-RADS 5 criteria.",
+      "medical_terms": [
+        {"term": "hepatocellular carcinoma"},
+        {"term": "arterial phase hyperenhancement"},
+        {"term": "portal venous washout"},
+        {"term": "LI-RADS 5"}
+      ]
+    },
+    {
+      "text": "Electromyography demonstrated acute inflammatory demyelinating polyneuropathy with conduction block and temporal dispersion characteristic of Guillain-Barré syndrome.",
+      "medical_terms": [
+        {"term": "acute inflammatory demyelinating polyneuropathy"},
+        {"term": "conduction block"},
+        {"term": "temporal dispersion"},
+        {"term": "Guillain-Barré syndrome"}
+      ]
+    },
+    {
+      "text": "High-resolution manometry revealed type II achalasia with panesophageal pressurization and incomplete lower esophageal sphincter relaxation.",
+      "medical_terms": [
+        {"term": "high-resolution manometry"},
+        {"term": "type II achalasia"},
+        {"term": "panesophageal pressurization"},
+        {"term": "lower esophageal sphincter"}
+      ]
+    },
+    {
+      "text": "Cardiac catheterization demonstrated severe three-vessel coronary artery disease with chronic total occlusion of the right coronary artery and SYNTAX score of 38.",
+      "medical_terms": [
+        {"term": "three-vessel coronary artery disease"},
+        {"term": "chronic total occlusion"},
+        {"term": "right coronary artery"},
+        {"term": "SYNTAX score"}
+      ]
+    },
+    {
+      "text": "Capsule endoscopy identified angiodysplasia in the jejunum with active oozing requiring argon plasma coagulation therapy.",
+      "medical_terms": [
+        {"term": "capsule endoscopy"},
+        {"term": "angiodysplasia"},
+        {"term": "jejunum"},
+        {"term": "argon plasma coagulation"}
+      ]
+    },
+    {
+      "text": "Renal biopsy showed focal segmental glomerulosclerosis with collapsing variant and extensive podocyte foot process effacement on electron microscopy.",
+      "medical_terms": [
+        {"term": "focal segmental glomerulosclerosis"},
+        {"term": "collapsing variant"},
+        {"term": "podocyte foot process effacement"}
+      ]
+    },
+    {
+      "text": "Temporal artery biopsy confirmed giant cell arteritis with transmural inflammation and multinucleated giant cells disrupting the internal elastic lamina.",
+      "medical_terms": [
+        {"term": "giant cell arteritis"},
+        {"term": "transmural inflammation"},
+        {"term": "multinucleated giant cells"},
+        {"term": "internal elastic lamina"}
+      ]
+    },
+    {
+      "text": "Video-EEG monitoring captured focal seizures originating from the mesial temporal lobe with secondary generalization and post-ictal aphasia.",
+      "medical_terms": [
+        {"term": "video-EEG monitoring"},
+        {"term": "focal seizures"},
+        {"term": "mesial temporal lobe"},
+        {"term": "secondary generalization"},
+        {"term": "post-ictal aphasia"}
+      ]
+    },
+    {
+      "text": "Synovial fluid analysis revealed calcium pyrophosphate dihydrate crystals with positive birefringence confirming pseudogout affecting the knee joint.",
+      "medical_terms": [
+        {"term": "calcium pyrophosphate dihydrate crystals"},
+        {"term": "positive birefringence"},
+        {"term": "pseudogout"}
+      ]
+    },
+    {
+      "text": "Contrast-enhanced ultrasound demonstrated portal vein thrombosis with cavernous transformation and hepatopetal collateral circulation.",
+      "medical_terms": [
+        {"term": "portal vein thrombosis"},
+        {"term": "cavernous transformation"},
+        {"term": "hepatopetal collateral circulation"}
+      ]
+    },
+    {
+      "text": "Muscle biopsy revealed inclusion body myositis with rimmed vacuoles and TDP-43 positive cytoplasmic inclusions on immunofluorescence.",
+      "medical_terms": [
+        {"term": "inclusion body myositis"},
+        {"term": "rimmed vacuoles"},
+        {"term": "TDP-43"},
+        {"term": "cytoplasmic inclusions"}
+      ]
+    },
+    {
+      "text": "Positron emission mammography detected multifocal invasive lobular carcinoma with skip lesions and contralateral synchronous ductal carcinoma in situ.",
+      "medical_terms": [
+        {"term": "positron emission mammography"},
+        {"term": "invasive lobular carcinoma"},
+        {"term": "skip lesions"},
+        {"term": "ductal carcinoma in situ"}
+      ]
+    },
+    {
+      "text": "Flow cytometry identified acute promyelocytic leukemia with t(15;17) translocation expressing CD13, CD33, and aberrant CD56.",
+      "medical_terms": [
+        {"term": "acute promyelocytic leukemia"},
+        {"term": "t(15;17) translocation"},
+        {"term": "CD13"},
+        {"term": "CD33"},
+        {"term": "CD56"}
+      ]
+    },
+    {
+      "text": "Dacryocystography revealed complete nasolacrimal duct obstruction with presaccal stenosis requiring dacryocystorhinostomy.",
+      "medical_terms": [
+        {"term": "dacryocystography"},
+        {"term": "nasolacrimal duct obstruction"},
+        {"term": "presaccal stenosis"},
+        {"term": "dacryocystorhinostomy"}
+      ]
+    },
+    {
+      "text": "Skin biopsy demonstrated bullous pemphigoid with subepidermal blister formation and linear IgG deposition along the basement membrane zone.",
+      "medical_terms": [
+        {"term": "bullous pemphigoid"},
+        {"term": "subepidermal blister"},
+        {"term": "linear IgG deposition"},
+        {"term": "basement membrane zone"}
+      ]
+    },
+    {
+      "text": "Vestibular evoked myogenic potentials showed absent responses bilaterally consistent with bilateral vestibulopathy secondary to gentamicin ototoxicity.",
+      "medical_terms": [
+        {"term": "vestibular evoked myogenic potentials"},
+        {"term": "bilateral vestibulopathy"},
+        {"term": "gentamicin ototoxicity"}
+      ]
+    },
+    {
+      "text": "Cystoscopy with blue light imaging identified carcinoma in situ with positive photodiagnosis using hexaminolevulinate fluorescence.",
+      "medical_terms": [
+        {"term": "blue light cystoscopy"},
+        {"term": "carcinoma in situ"},
+        {"term": "hexaminolevulinate fluorescence"}
+      ]
+    },
+    {
+      "text": "Transesophageal echocardiography revealed papillary fibroelastoma on the aortic valve with mobile frond-like projections measuring 8 mm.",
+      "medical_terms": [
+        {"term": "transesophageal echocardiography"},
+        {"term": "papillary fibroelastoma"},
+        {"term": "aortic valve"}
+      ]
+    },
+    {
+      "text": "Lymphoscintigraphy demonstrated primary lymphedema with dermal backflow pattern and absent visualization of inguinal lymph nodes.",
+      "medical_terms": [
+        {"term": "lymphoscintigraphy"},
+        {"term": "primary lymphedema"},
+        {"term": "dermal backflow"},
+        {"term": "inguinal lymph nodes"}
+      ]
+    },
+    {
+      "text": "Arthroscopy revealed pigmented villonodular synovitis with hemosiderin-laden synovial proliferation and characteristic nodular appearance.",
+      "medical_terms": [
+        {"term": "pigmented villonodular synovitis"},
+        {"term": "hemosiderin-laden"},
+        {"term": "synovial proliferation"}
+      ]
+    },
+    {
+      "text": "Bronchoscopy with endobronchial biopsy confirmed carcinoid tumor expressing chromogranin A and synaptophysin with low Ki-67 index.",
+      "medical_terms": [
+        {"term": "carcinoid tumor"},
+        {"term": "chromogranin A"},
+        {"term": "synaptophysin"},
+        {"term": "Ki-67 index"}
+      ]
+    },
+    {
+      "text": "Perfusion MRI demonstrated luxury perfusion in the penumbra surrounding acute ischemic stroke with mismatch ratio exceeding 1.8.",
+      "medical_terms": [
+        {"term": "perfusion MRI"},
+        {"term": "luxury perfusion"},
+        {"term": "penumbra"},
+        {"term": "ischemic stroke"},
+        {"term": "mismatch ratio"}
+      ]
+    },
+    {
+      "text": "Endoscopic retrograde cholangiopancreatography revealed type I choledochal cyst with anomalous pancreaticobiliary junction.",
+      "medical_terms": [
+        {"term": "endoscopic retrograde cholangiopancreatography"},
+        {"term": "type I choledochal cyst"},
+        {"term": "anomalous pancreaticobiliary junction"}
+      ]
+    },
+    {
+      "text": "Quantitative sensory testing demonstrated small fiber neuropathy with thermal hypoesthesia and paradoxical heat sensation.",
+      "medical_terms": [
+        {"term": "quantitative sensory testing"},
+        {"term": "small fiber neuropathy"},
+        {"term": "thermal hypoesthesia"},
+        {"term": "paradoxical heat sensation"}
+      ]
+    },
+    {
+      "text": "Liver elastography measured hepatic stiffness of 21.5 kPa consistent with F4 fibrosis and portal hypertension in chronic hepatitis C.",
+      "medical_terms": [
+        {"term": "liver elastography"},
+        {"term": "hepatic stiffness"},
+        {"term": "F4 fibrosis"},
+        {"term": "portal hypertension"},
+        {"term": "chronic hepatitis C"}
       ]
     }
   ]
