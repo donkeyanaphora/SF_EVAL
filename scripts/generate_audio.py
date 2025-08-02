@@ -1,108 +1,86 @@
-import json, uuid, time, sys, traceback
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from pathlib import Path
+# synthesize_medical40_chunks_simple.py
+#
+# Reads synthetic_sentences.json  ->  writes WAVs + manifest.jsonl
+# Make sure OPENAI_API_KEY is in your environment (or .env).
 
+import json, uuid, time, re, sys, traceback
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import OpenAI, RateLimitError, APIError
 from dotenv import load_dotenv
 
-# ── paths & constants ───────────────────────────────────────────────────────
-ROOT = Path(__file__).resolve().parents[1]
-JSON_IN = ROOT / "data" / "input"  / "synthetic_sentences.json"
-OUT_DIR = ROOT / "data" / "output"
-MANIFEST = OUT_DIR / "manifest.jsonl"
+# ── PATHS & CONSTANTS ──────────────────────────────────────────────────────
+ROOT      = Path(__file__).resolve().parents[1]        # project root
+JSON_IN   = ROOT / "data" / "input"  / "specialize.json"
+OUT_DIR   = ROOT / "data" / "output"
+MANIFEST  = OUT_DIR / "manifest.jsonl"
 
-MODEL = "tts-1-hd"
-VOICE = "nova"
-FORMAT = "wav"
-JOBS = 6
-RETRIES = 3
+MODEL     = "gpt-4o-mini-tts"
+VOICE     = "nova"
+FORMAT    = "wav"
+JOBS      = 6                       # parallel threads
+RETRIES   = 3
+INSTRUCT  = "You are a doctor recording a medical report please ignore punctuation and just read fluidly while being sure to pronounce specialized terms correctly."
 
-load_dotenv(ROOT / ".env") 
-client = OpenAI()
+# ── setup ──────────────────────────────────────────────────────────────────
 OUT_DIR.mkdir(parents=True, exist_ok=True)
+load_dotenv()                       # pull OPENAI_API_KEY
+client = OpenAI()
 
-# ── helper: span validation (unchanged) ─────────────────────────────────────
-# def validate_spans(block: list[dict], cat: str) -> None:
-#     for idx, row in enumerate(block, 1):
-#         txt = row["text"]
-#         for term in row["terms"]:
-#             if txt[term["start"]:term["end"]] != term["text"]:
-#                 raise ValueError(
-#                     f"[{cat} #{idx}] span mismatch: "
-#                     f'"{term["text"]}" not at {term["start"]}:{term["end"]}'
-#                 )
-#     print(f"{cat} spans OK")
+_strip_nan = re.compile(r"\s*nan\s*$", re.IGNORECASE)
+clean = lambda txt: _strip_nan.sub("", txt).strip()
 
-# ── helper: TTS for a single sentence ───────────────────────────────────────
-def synth(category: str, idx: int, sentence: str) -> None:
+def tts_job(rec: dict, idx: int):
     uid = str(uuid.uuid4())
-    wav = OUT_DIR / f"{uid}.{FORMAT}"
-    if wav.exists():
-        return  # skip if already done
+    wav_path = OUT_DIR / f"{uid}.{FORMAT}"
+    if wav_path.exists():                    # resume-safe
+        return
 
+    text = clean(rec["text"])
     for attempt in range(RETRIES + 1):
         try:
             rsp = client.audio.speech.create(
                 model=MODEL,
                 voice=VOICE,
-                input=sentence,
+                input=text,
+                instructions=INSTRUCT,
                 response_format=FORMAT,
             )
-            # new helper (SDK ≥ 1.23)
-            rsp.write_to_file(wav)
-            print("saved", wav.name)
+            rsp.write_to_file(wav_path)
+            print("✓", wav_path.name)
 
-            # append one manifest line
+            row = {
+                "uuid": uid,
+                "file": wav_path.name,
+                "chunk_id": rec.get("chunk_id"),
+                "orig_id":  rec.get("orig_id"),
+                "label":    rec.get("label"),
+                "text":     text,
+            }
             with MANIFEST.open("a", encoding="utf-8") as f:
-                f.write(json.dumps({
-                    "uuid": uid,
-                    "file": wav.name,
-                    "category": category,
-                    "index": idx,
-                    "text": sentence
-                }) + "\n")
+                f.write(json.dumps(row) + "\n")
             return
 
         except (RateLimitError, APIError) as e:
             if attempt < RETRIES:
-                wait = 2 ** attempt
-                print(f"retry {category} #{idx} in {wait}s – {e}")
-                time.sleep(wait)
+                time.sleep(2 ** attempt)
                 continue
             raise
-
         except Exception:
-            print(f"\nFAILED {category} #{idx}\n{sentence}\n", file=sys.stderr)
+            print(f"\nFAILED idx={idx}\n{text}\n", file=sys.stderr)
             traceback.print_exc()
             return
 
-# ── main batch driver (with threads) ────────────────────────────────────────
-def main() -> None:
-    data = json.loads(JSON_IN.read_text("utf-8"))
-
-    # for cat in ("doctor_sentences", "claim_sentences"):
-    #     validate_spans(data[cat], cat)
-
-    tasks = []
+def main():
+    records = json.loads(JSON_IN.read_text("utf-8"))
     with ThreadPoolExecutor(max_workers=JOBS) as pool:
-        for cat in ("radiology_dictations", "study_sentences"):
-            for i, row in enumerate(data[cat], 1):
-                tasks.append(pool.submit(synth, cat, i, row["text"]))
-
-        for fut in as_completed(tasks):
-            if (exc := fut.exception()):
-                print("\nBatch stopped because of an unrecoverable error.")
+        futs = [pool.submit(tts_job, rec, i)
+                for i, rec in enumerate(records, 1)]
+        for f in as_completed(futs):
+            if exc := f.exception():
+                print("unrecoverable error:", exc, file=sys.stderr)
                 sys.exit(1)
+    print("\nAll done – audio files and manifest at", OUT_DIR.resolve())
 
-    print("All sentences processed; audio + manifest at:", OUT_DIR)
-
-# ── entry point ─────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    try:
-        main()
-    except ValueError as ve:
-        print("\nSPAN VALIDATION FAILED:", ve)
-        sys.exit(1)
-    except Exception as e:
-        print("\nUnexpected error:", e)
-        sys.exit(1)
+    main()
