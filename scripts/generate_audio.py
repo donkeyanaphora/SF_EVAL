@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 # ── PATHS & CONSTANTS ──────────────────────────────────────────────────────
 ROOT      = Path(__file__).resolve().parents[1]        # project root
-JSON_IN   = ROOT / "data" / "input"  / "specialize.json"
+JSON_IN   = ROOT / "data" / "input"  / "specialize-2.json"
 OUT_DIR   = ROOT / "data" / "output"
 MANIFEST  = OUT_DIR / "manifest.jsonl"
 
