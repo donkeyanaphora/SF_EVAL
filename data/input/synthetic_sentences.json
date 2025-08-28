@@ -276,11 +276,11 @@
       ]
     },
     {
-      "text": "MRI spectroscopy detected elevated taurine peaks in a medulloblastoma of the desmoplastic/nodular subtype.",
+      "text": "MRI spectroscopy detected elevated taurine peaks in a medulloblastoma of the desmoplastic nodular subtype.",
       "medical_terms": [
         {"term": "taurine peaks"},
         {"term": "medulloblastoma"},
-        {"term": "desmoplastic/nodular subtype"}
+        {"term": "desmoplastic nodular subtype"}
       ]
     },
     {
@@ -376,9 +376,9 @@
       ]
     },
     {
-      "text": "PET-MRI illustrated hypermetabolic foci in myxoid/round cell liposarcoma with translocation t(12;16)(q13;p11).",
+      "text": "PET-MRI illustrated hypermetabolic foci in myxoid round cell liposarcoma with translocation t(12;16)(q13;p11).",
       "medical_terms": [
-        {"term": "myxoid/round cell liposarcoma"},
+        {"term": "myxoid round cell liposarcoma"},
         {"term": "t(12;16)(q13;p11) translocation"}
       ]
     },
