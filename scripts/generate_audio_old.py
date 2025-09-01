@@ -7,12 +7,12 @@ from dotenv import load_dotenv
 
 # ── paths & constants ───────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parents[1]
-JSON_IN = ROOT / "data" / "input"  / "synthetic_sentences.json"
+JSON_IN = ROOT / "data" / "input"  / "synthetic_test.json"
 OUT_DIR = ROOT / "data" / "output"
 MANIFEST = OUT_DIR / "manifest.jsonl"
 
 MODEL = "gpt-4o-mini-tts" # tts-1-hd
-INSTRUCTION = "You are a doctor recording a medical report"
+INSTRUCTION = "You are a doctor dictating a radiology report"
 VOICE = "nova"
 FORMAT = "wav"
 JOBS = 6
@@ -91,7 +91,7 @@ def main() -> None:
 
     tasks = []
     with ThreadPoolExecutor(max_workers=JOBS) as pool:
-        for cat in ("radiology_dictations", "study_sentences"):
+        for cat in ("radiology_dictations_gpt5", "radiology_dictations_claude"):
             for i, row in enumerate(data[cat], 1):
                 # ---- pass the extra arg (or [] if missing) ----
                 tasks.append(
