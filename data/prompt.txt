@@ -1,0 +1,8 @@
+please generate 150 unique radiology dictations, dictations must be realistic and have correct medical terminology usage and spelling. Additionally, these sentences must be text to speech friendly.
+
+data should be provided in a markdown cell and formatted as such 
+{"radiology_dictations":[
+{"text":...},
+...,
+{"text":...}
+]}
