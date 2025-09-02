@@ -1,0 +1,89 @@
+```{=html}
+<div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+  <canvas id="fusionChart" style="max-width: 100%; height: 400px;"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Shallow fusion performance data
+const data = {
+  labels: [0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24, 0.27, 0.3, 0.33, 0.36],
+  datasets: [
+    {
+      label: 'Baseline (Whisper Only)',
+      data: [6.86, 6.86, 6.86, 6.86, 6.86, 6.86, 6.86, 6.86, 6.86, 6.86, 6.86, 6.86],
+      borderColor: '#9CA3AF',
+      borderDash: [5, 5],
+      fill: false,
+      pointRadius: 0,
+      borderWidth: 2
+    },
+    {
+      label: '+ Medical GPT-2',
+      data: [6.66, 6.67, 6.6, 6.5, 6.56, 6.43, 6.43, 6.28, 6.48, 6.67, 6.98, 7.0],
+      borderColor: '#10B981',
+      backgroundColor: '#10B98120',
+      fill: '+1',
+      pointRadius: 3,
+      borderWidth: 2.5
+    },
+    {
+      label: '+ Generic GPT-2',
+      data: [6.84, 6.96, 7.09, 7.21, 7.41, 7.38, 7.43, 7.45, 7.64, 7.98, 8.23, 8.27],
+      borderColor: '#EF4444',
+      backgroundColor: '#EF444420',
+      fill: '-1',
+      pointRadius: 3,
+      borderWidth: 2.5
+    }
+  ]
+};
+
+// Create interactive chart
+new Chart(document.getElementById('fusionChart'), {
+  type: 'line',
+  data: data,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      title: {
+        display: true,
+        text: 'Domain Expertise is Critical for Shallow Fusion',
+        font: { size: 16, weight: 'bold' }
+      },
+      legend: {
+        position: 'top',
+      },
+      tooltip: {
+        callbacks: {
+          title: (ctx) => 'λ = ' + ctx[0].label,
+          label: (ctx) => {
+            const val = ctx.parsed.y.toFixed(2);
+            const baseline = 6.86;
+            const change = ((val - baseline) / baseline * 100).toFixed(1);
+            if (ctx.dataset.label.includes('Baseline')) {
+              return ctx.dataset.label + ': ' + val + '%';
+            }
+            return ctx.dataset.label + ': ' + val + '% (' + 
+                   (change > 0 ? '+' : '') + change + '% change)';
+          }
+        }
+      }
+    },
+    scales: {
+      x: { 
+        title: { display: true, text: 'Fusion Weight (λ)' }
+      },
+      y: { 
+        title: { display: true, text: 'Word Error Rate (%)' },
+        min: 5.8,
+        max: 8.8
+      }
+    }
+  }
+});
+</script>
+```
+*Figure 2: Interactive graph showing domain-specific models improve performance (green) while generic models degrade it (red). Hover for exact values.*
