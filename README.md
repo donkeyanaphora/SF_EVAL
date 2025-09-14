@@ -57,21 +57,19 @@ Balancing improved WER for medical terminology against potential performance deg
 ### Technical Improvements
 
 **Completed:**
-- [x] Beam search decoding ([reference](https://huggingface.co/blog/mlabonne/decoding-strategies))
-- [x] Prompt engineering for domain adaptation with GPT-2
+- [✔️] Build custom logits processor for fusion
+- [✔️] Beam search support (part of the logits processor work) ([reference](https://huggingface.co/blog/mlabonne/decoding-strategies))
+- [✔️] Prompt engineering for domain adaptation with GPT-2
+- [✔️] Normalize WER metric
+- [✔️] Handle punctuation mismatches in evaluation sets
+- [✔️] Replace deprecated original dataset
 
 **In Progress:**
-- [ ] Cache `past_key_values` to avoid redundant encoder passes
-- [ ] Develop adaptive gating mechanism for context-aware decoder influence
-- [ ] Further fine-tune on medical domain (considering trade-offs with term forgetting)
-- [ ] Fine-tune on conversational text (~10,000 samples)
-- [ ] Fine-tune on spoken text (~10,000 samples)
-
-### Evaluation Tasks
-- [ ] Define metrics for conversational fillers
-- [ ] Handle punctuation mismatches in evaluation sets
-- [ ] Replace deprecated original dataset
-- [ ] Quantify trade-offs between medical term accuracy and overall fluency
+- [⏳] Evaluate on non-synthetic (Shaip Radiology Dictations)
+- [⏳] Cache `past_key_values` to avoid redundant encoder passes
+- [⏳] Develop adaptive gating mechanism for context-aware decoder influence
+- [⏳] Coverage penalty term for early terminations (self attention step)
+- [❌] Fine-tune on conversational text (~10,000 samples) if needed
 
 ## Notes
 This is an active research project. The main concern is improving WER for medical terms while managing performance on conversational filler terms that may be absent in the external LMs' pre-training data.
