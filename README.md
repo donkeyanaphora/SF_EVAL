@@ -4,7 +4,7 @@ An integration and evaluation repository for testing shallow fusion techniques o
 
 ## Overview
 
-This proof-of-concept explores shallow fusion methods to improve medical transcription accuracy by combining acoustic and language models. The project aims to reduce Word Error Rate (WER) for medical terminology while maintaining overall transcription quality. For details on the model pretraining please refer to the model cards or the repo for the finetuning pipeline
+This proof-of-concept explores shallow fusion methods to improve medical transcription quality by combining acoustic and language models. The project aims to reduce Word Error Rate (WER) for medical terminology while maintaining overall transcription quality. For details on the model pretraining please refer to the model cards or the repo for the finetuning pipeline
 
 ## Related Resources
 **Fine tuning pipeline and model cards**:
